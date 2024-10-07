@@ -1,0 +1,10 @@
+{% comment %} HTML file to delete the Blog. {% endcomment %}
+
+
+<h1>Delete the Blog Post</h1>
+<p>Are you sure you want to delete "{{product.name}}"?</p>
+<form method="post">
+    {%csrf_token%}
+    <button type="submit">Yes,Delete</button>
+</form>
+{% comment %} {% csrf_token %} is used for security to prevent CSRF attacks. {% endcomment %}

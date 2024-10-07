@@ -1,0 +1,14 @@
+{% comment %} HTML file to edit the Blog. {% endcomment %}
+
+
+<h1>Edit Blog Post</h1>
+<form method = "post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type = "submit">Save Changes</button>
+</form>
+
+{% comment %} Form for editing: This page contains a form to edit the blog post, 
+which is rendered with {{ form.as_p }}. 
+This is a Django shortcut that displays the form fields 
+(provided by the Django form class in the view) in paragraph format. {% endcomment %}
